@@ -1,0 +1,6 @@
+<!--index.wxml-->
+<view class="add" bindtap="addPhoto">点击添加照片</view>
+<image src="{{src}}" mode="widthFix" bindlongtap="saveImg"></image>
+<scroll-view bindscroll="scroll" scroll-x="true" scroll-y>
+  <button class="style {{currentTab==index ? 'on' : ''}}" wx:for="{{style}}" data-style="{{item}}" data-current="{{index}}" bindtap="chooseStyle" hover-class="other-button-hover">{{item}}</button>
+</scroll-view>
